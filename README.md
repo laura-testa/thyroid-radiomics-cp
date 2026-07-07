@@ -36,7 +36,7 @@ We propose a radiomics-based framework that extracts quantitative features from 
 
 ### Partial Dependence Plots
 ![Partial Dependence Plots](images/gam_pdp_top.png)
-*Partial dependence plots of the three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
+*Partial dependence plots of three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
 
 ### CCCP Results (Test Set, K=10)
 
