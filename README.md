@@ -34,7 +34,7 @@ We propose a radiomics-based framework that extracts quantitative features from 
 | Extra Trees | 0.88 | 0.95 | 0.51 | 0.85 | 0.77 | 0.90 |
 | MLP | 0.89 | 0.93 | 0.62 | 0.88 | 0.75 | 0.91 |
 
-
+### Partial Dependence Plots
 ![Partial Dependence Plots](images/gam_pdp_top.png)
 *Partial dependence plots of the three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
 
