@@ -1,6 +1,6 @@
 # Radiomics-Based Thyroid Nodule Classification with Label-Conditional Conformal Prediction
 
-> Laura Testa, Umberto Ferraro Petrillo, Pierpaolo Brutti  
+> Laura Testa, Pierpaolo Brutti, Umberto Ferraro Petrillo  
 > Department of Statistical Sciences, Sapienza University of Rome  
 > *Proceedings of CIBB 2026*
 
