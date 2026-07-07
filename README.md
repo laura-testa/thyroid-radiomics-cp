@@ -15,29 +15,17 @@ We propose a radiomics-based framework that extracts quantitative features from 
 
 ## Repository Structure
 thyroid-radiomics-cp/
-├── Thyroid_Classification_CP.ipynb   # Main pipeline notebook
-├── features/
-│   ├── features_train.csv            # Precomputed PyRadiomics features (train)
-│   ├── features_val.csv              # Precomputed PyRadiomics features (val)
-│   └── features_test.csv             # Precomputed PyRadiomics features (test)
-├── images/
-│   ├── sample_pair.png               # Representative US image pair
-│   └── gam_pdp_top.png               # GAM partial dependence plots (top 3 features)
-└── README.md
+    Thyroid_Classification_CP.ipynb   # Main pipeline notebook
+    features/
+        features_train.csv            # Precomputed PyRadiomics features (train)
+        features_val.csv              # Precomputed PyRadiomics features (val)
+        features_test.csv             # Precomputed PyRadiomics features (test)
+    results/
+        sample_pair.png               # Representative US image pair
+        gam_pdp_top3.png              # GAM partial dependence plots (top 3 features)
+    README.md
 
 
-## Requirements
-pyradiomics (install from source)
-SimpleITK
-pygam
-scikit-learn
-xgboost
-opencv-python
-pandas
-numpy
-matplotlib
-seaborn
-tqdm
 
 
 ## How to Run
