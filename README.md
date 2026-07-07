@@ -8,7 +8,7 @@
 
 This repository contains the code for a radiomics-based pipeline for thyroid nodule malignancy classification on the [TN5000](https://figshare.com/s/cb6a67f17c04b29e7edd) ultrasound dataset. Quantitative features are extracted via PyRadiomics and fed to a Generalized Additive Model (GAM), selected among six classifiers for its best sensitivity-specificity trade-off and native interpretability. Label-Conditional Cross-Conformal Prediction (CCCP) is applied to quantify predictive uncertainty, flagging ambiguous cases for clinical review rather than forcing a binary decision.
 
-![Partial Dependence Plots](imagess/gam_pdp_top.png)
+![Partial Dependence Plots](images/gam_pdp_top.png)
 *Partial dependence plots of the three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
 
 ## Repository Structure
