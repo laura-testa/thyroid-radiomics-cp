@@ -6,10 +6,12 @@
 
 ## Overview
 
-This repository contains the code for a radiomics-based pipeline for thyroid nodule malignancy classification on the [TN5000]([https://figshare.com/s/cb6a67f17c04b29e7edd](https://www.nature.com/articles/s41597-025-05757-4)) ultrasound dataset. Quantitative features are extracted via PyRadiomics and fed to a Generalized Additive Model (GAM), selected among six classifiers for its best sensitivity-specificity trade-off and native interpretability. Label-Conditional Cross-Conformal Prediction (CCCP) is applied to quantify predictive uncertainty, flagging ambiguous cases for clinical review rather than forcing a binary decision.
+Thyroid cancer is one of the most prevalent endocrine malignancies, with an increasing incidence worldwide. Diagnosis relies primarily on ultrasound (US) imaging, yet current risk stratification systems such as ACR TI-RADS suffer from substantial interobserver variability, contributing to a high rate of unnecessary biopsies,  with at least half of those performed proving to be benign.
 
-![Partial Dependence Plots](images/gam_pdp_top.png)
-*Partial dependence plots of the three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
+We propose a radiomics-based framework that extracts quantitative features from US nodule images via PyRadiomics, selects a Generalized Additive Model (GAM) as the classifier for its best sensitivity-specificity trade-off and native interpretability, and applies Label-Conditional Cross-Conformal Prediction (CCCP) to quantify predictive uncertainty, flagging ambiguous cases for clinical review rather than forcing a binary decision.
+
+![Sample pair](images/sample_pair.png)
+*Representative US images from TN5000. Bounding boxes indicate the annotated nodule ROI used for radiomic feature extraction (blue: benign, red: malignant).*
 
 ## Repository Structure
 thyroid-radiomics-cp/
@@ -18,7 +20,25 @@ thyroid-radiomics-cp/
 │   ├── features_train.csv            # Precomputed PyRadiomics features (train)
 │   ├── features_val.csv              # Precomputed PyRadiomics features (val)
 │   └── features_test.csv             # Precomputed PyRadiomics features (test)
+├── images/
+│   ├── sample_pair.png               # Representative US image pair
+│   └── gam_pdp_top.png               # GAM partial dependence plots (top 3 features)
 └── README.md
+
+
+## Requirements
+pyradiomics (install from source)
+SimpleITK
+pygam
+scikit-learn
+xgboost
+opencv-python
+pandas
+numpy
+matplotlib
+seaborn
+tqdm
+
 
 ## How to Run
 
@@ -53,3 +73,5 @@ thyroid-radiomics-cp/
 
 †Benign coverage below target. Bold indicates the selected significance level.
 
+![Partial Dependence Plots](images/gam_pdp_top.png)
+*Partial dependence plots of the three clinically interpretable features. Each plot shows the GAM spline f(x), the contribution of that feature to the log-odds of malignancy, with 95% confidence band.*
